@@ -1,0 +1,87 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: #b5e2fa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container {
+
+	overflow-x: scroll;
+	max-width: 700px;
+	width: 100%;
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	padding: 20px;
+	margin: 12px;
+	border-radius: 5px;
+}
+
+form select,form select option {
+	cursor: pointer;
+}
+form input,form select {
+	width: 100%;
+	padding: 12px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	outline: none;
+	border: 2px solid #edede9;
+}
+
+form button {
+	width: 100%;
+	padding: 12px;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	color: white;
+	outline: none;
+	border: none;
+	background: #0077b6;
+	cursor: pointer;
+}
+form button:hover {
+	background: #00b4d8;
+}
+.container .menu {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 6px;
+
+}
+.container .menu a {
+	text-decoration: none;
+	padding: 6px;
+	background: #fff;
+	border: 1px solid #0fa3b1;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	color: #0fa3b1;
+}
+
+.container a.active {
+	background: #0077b6;
+	color: white;
+}
+
+.notif {
+	background: #57cc99;
+	padding: 12px;
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+
+
+table th, table td {
+	padding: 6px;
+	white-space: nowrap;
+}
