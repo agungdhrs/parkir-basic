@@ -14,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password, $user['password'])) {
             // Login berhasil
             $_SESSION['username'] = $username;
-            header("Location: create.php");
+            $_SESSION['login_success'] = true;
+            header("Location: index.php");
             exit();
         } else {
             // Password salah
@@ -35,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parkir Program</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     </style>
     <link rel="stylesheet" href="style.css">
-    <title>Parkir Program</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container">
@@ -53,18 +54,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" required name="username">
 
             <label for="">Password</label>
-            <input type="password" require name="password">
+            <input type="password" required name="password">
 
-            <?php
-            if (isset($_SESSION['error'])) { ?>
-                <div class="error">
-                    <p><?= $_SESSION['error'] ?></p>
-                </div>
-                <?php unset($_SESSION['error']); 
-            } ?>
-
-            <button>Log In</button>
+            <button type="submit">Log In</button>
         </form>
     </div>
+
+    <script>
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo "
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '".$_SESSION['error']."'
+                });
+            ";
+            unset($_SESSION['error']);
+        }
+
+        if (isset($_SESSION['login_success']) && $_SESSION['login_success']) {
+            echo "
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Login Berhasil',
+                    text: 'Anda berhasil login!',
+                    didClose: () => {
+                        window.location = 'create.php';
+                    }
+                });
+            ";
+            unset($_SESSION['login_success']);
+        }
+        ?>
+    </script>
 </body>
 </html>
