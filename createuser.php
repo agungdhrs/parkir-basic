@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="container">
         <div class="menu">
-            <a href="./createuser.php">REGISTER AKUN</a>
+            <a href="./index.php">Login</a>
         </div>
 
         <form action="" method="post">

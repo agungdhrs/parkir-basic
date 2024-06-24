@@ -36,10 +36,10 @@ if (isset($_POST['no_kendaraan'])) {
 
 	<div class="container">
 		<div class="menu">
-			<a class="active" href="./create.php">MASUK</a>
+			<a class="active" href="#">MASUK</a>
 			<a href="./keluar.php">KELUAR</a>
-			<a href="list.php">LIST AKTIF</a>
-			<a href="./">LOG OUT</a>
+			<a href="./list.php">LIST AKTIF</a>
+			<a href="./user.php">USER</a>
 		</div>
 
 		<form action="" method="post">
@@ -64,6 +64,9 @@ if (isset($_POST['no_kendaraan'])) {
 
 			<button>Tambah</button>
 		</form>
+		<div class="menu">
+			<a href="./index.php">LOG OUT</a>
+		</div>
 	</div>
 	
 </body>

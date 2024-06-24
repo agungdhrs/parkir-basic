@@ -79,9 +79,9 @@ if (isset($_POST['cari_kendaraan'])) {
     <div class="container">
         <div class="menu">
             <a href="./create.php">MASUK</a>
-            <a  class="active" href="./keluar.php">KELUAR</a>
-            <a href="list.php">LIST AKTIF</a>
-			<a href="./">LOG OUT</a>
+            <a class="active" href="#">KELUAR</a>
+            <a href="./list.php">LIST AKTIF</a>
+			<a href="./user.php">USER</a>
         </div>
 
         <?php if (!isset($tampil)) { ?>
@@ -142,7 +142,9 @@ if (isset($_POST['cari_kendaraan'])) {
             <button>Selesaikan</button>
         </form>
             <?php  } ?>
-
+        <div class="menu">
+			<a href="./index.php">LOG OUT</a>
+		</div>
     </div>
     
 </body>

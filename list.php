@@ -24,8 +24,8 @@ $data = query("SELECT * FROM tb_kendaraan ORDER BY status ASC");
 		<div class="menu">
 			<a href="./create.php">MASUK</a>
 			<a href="./keluar.php">KELUAR</a>
-			<a  class="active" href="list.php">LIST AKTIF</a>
-			<a href="./">LOG OUT</a>
+			<a class="active" href="#">LIST AKTIF</a>
+			<a href="./user.php">USER</a>
 		</div>
 
 	<table width="100%" border="1" cellspacing="0">
@@ -50,7 +50,9 @@ $data = query("SELECT * FROM tb_kendaraan ORDER BY status ASC");
 		<?php } ?>
 		
 	</table>
-	
+	<div class="menu">
+			<a href="./index.php">LOG OUT</a>
+	</div>
 	</div>
 	
 </body>
