@@ -13,7 +13,7 @@ if (isset($_POST['no_kendaraan'])) {
 		header("Location: ./create.php");
 		die();
 	}else{
-		$_SESSION['notif'] = 'gagal menambah data';
+		$_SESSION['notif'] = 'gagal menambah data'; 
 		header("Location: ./create.php");
 		die();
 	}
