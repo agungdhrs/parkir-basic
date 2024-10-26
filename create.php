@@ -10,7 +10,7 @@ if (isset($_POST['no_kendaraan'])) {
 	$x = query("INSERT INTO tb_kendaraan (no_kendaraan,jenis_kendaraan,jam_masuk,jam_keluar,status) VALUES ('$no_kendaraan','$jenis_kendaraan','$jam_masuk','','belum selesai') ");
 	if ($x) {
 		$_SESSION['notif'] = 'berhasil menambah data';
-		header("Location: ./create.php");
+		header("Location: ./create.php"); 
 		die();
 	}else{
 		$_SESSION['notif'] = 'gagal menambah data'; 
