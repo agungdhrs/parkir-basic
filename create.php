@@ -16,7 +16,7 @@ if (isset($_POST['no_kendaraan'])) {
 		$_SESSION['notif'] = 'gagal menambah data'; 
 		header("Location: ./create.php");
 		die();
-	}
+	} 
 
 }
 
