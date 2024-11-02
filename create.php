@@ -6,7 +6,7 @@ if (isset($_POST['no_kendaraan'])) {
 	$no_kendaraan		= $_POST['no_kendaraan'];
 	$jenis_kendaraan	= $_POST['jenis_kendaraan'];
 	$jam_masuk			= $_POST['jam_masuk'];   
-
+ 
 	$x = query("INSERT INTO tb_kendaraan (no_kendaraan,jenis_kendaraan,jam_masuk,jam_keluar,status) VALUES ('$no_kendaraan','$jenis_kendaraan','$jam_masuk','','belum selesai') ");
 	if ($x) {
 		$_SESSION['notif'] = 'berhasil menambah data';
