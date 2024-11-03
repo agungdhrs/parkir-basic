@@ -1,7 +1,7 @@
 <?php include "koneksi.php";
 
 date_default_timezone_set('Asia/Jakarta');
-
+ 
 if (isset($_POST['no_kendaraan'])) {
 	$no_kendaraan		= $_POST['no_kendaraan'];
 	$jenis_kendaraan	= $_POST['jenis_kendaraan'];
